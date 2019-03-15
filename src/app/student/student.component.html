@@ -1,0 +1,67 @@
+<div class="form">
+  <input type="text" name="rollno" value="rollno" [(ngModel)]="student.rollno" placeholder="rollno">
+<input type="text" name="firstName" value="firstName" [(ngModel)]="student.firstName" placeholder="firstname">
+<input type="text" name="lastName" value="lastName" [(ngModel)]="student.lastName" placeholder="lastname">
+<select name="class" [(ngModel)]="student.class" placeholder="class">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+</select>
+<input type="date" name="calender" value="calender" [(ngModel)]="student.dob" placeholder="dob">
+<input type="text" name="phone" value="phone" [(ngModel)]="student.phone" placeholder="phone"> 
+<input type="text" name="email" value="email" [(ngModel)]="student.email" placeholder="email">
+<input type="text" name="teacher" value="teacher" [(ngModel)]="student.teacher" placeholder="teacher">
+<select name="subject" [(ngModel)]="student.subject" placeholder="subject">
+  <option>Hindi</option>
+  <option>English</option>
+  <option>Science</option>
+  <option>Maths</option>
+  <option>Social Studies</option>
+</select>
+<input type="text" name="address" value="address" [(ngModel)]="student.address" placeholder="address">
+<input type="button" name="add" value="Add Student" (click)="addStudent(student)" >
+
+<input type="button" value="Edit" name="edit" (click)="updateStudent(student)">
+<br><br><br>
+</div>
+<div class="list" >
+  
+        <table style="width:100%"  border="1"  border-collapse: collapse>
+            <thead>
+              <th width="15%">Roll No</th>
+              <th width="15%">First Name</th> 
+              <th width="15%">Last Name</th>
+              <th width="5%">Class</th>
+              <th width="10%">DOB</th>
+              <th width="15%">Phone</th>
+              <th width="25%">Email</th>
+              <th width="25%">Teacher</th>
+              <th width="25%">Subject</th>
+              <th width="25%">Address</th>
+            </thead>
+            <tbody *ngFor="let student of students">
+              <td width="15%">{{student.rollno}}</td>
+              <td width="15%">{{student.firstName}}</td>
+              <td width="15%">{{student.lastName}}</td>
+              <td width="5%">{{student.class}}</td>
+              <td width="10%">{{student.dob}}</td>
+              <td width="15%">{{student.phone}}</td>
+              <td width="25%">{{student.email}}</td>
+              <td width="25%">{{student.teacher}}</td>
+              <td width="25%">{{student.subject}}</td>
+              <td width="25%">{{student.address}}</td>
+              <td width="25%"><input type="button" name="delete" value="&times;" (click)="deleteStudent(student)">
+              </td>
+              
+            </tbody>
+    </table>
+
+    
+</div>

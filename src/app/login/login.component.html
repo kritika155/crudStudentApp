@@ -1,0 +1,25 @@
+<div class="login">
+  <form action="" method="post" id="lgform">
+
+          <h1>Login</h1>
+          
+          <div>
+              <label for="email">Username:</label><br>
+              <input type="text" name="username" id="username" required [(ngModel)]="data.username" placeholder="Enter username">
+          </div>
+          <div>
+              <label for="password">Password</label><br>
+              <input type="password" placeholder="password" name="password" id="password" required [(ngModel)]="data.password">
+          </div>
+          <div>
+              <label for="submit"></label>
+              <input type="button" value="Login" id="submit" (click)="login()">
+              <br>
+              <input type="checkbox" name="remberme" value="Remember me"> Remember Me<br>
+              <input type="button" value="signup" id="signup" name="signup">
+
+          </div>
+    
+    </form>
+    
+</div>

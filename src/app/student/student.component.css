@@ -1,0 +1,19 @@
+ul li{
+    list-style-type:none;
+}
+.form input[type="text"]{
+    width:9%;
+    height: 9%;
+    
+}
+/* .form input[type="select"]{
+    width:9%;
+    height: 9%;
+} */
+.list table{
+    background-color: white;
+}
+/* .form input[type="date"]{
+    width:9%;
+    height: 6%;
+} */
